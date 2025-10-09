@@ -90,16 +90,12 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6          &kp F7         &kp F8          &kp F9                &kp F10                &kp F11
-&trans  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp CARET       &kp AMPERSAND  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F12
-&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp MINUS       &kp EQUAL      &kp ASTRK       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
-&trans  &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE               &trans
-                   &trans     &trans    &trans    &trans     &trans    &trans  &trans          &trans         &trans          &trans
+&trans  &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6             &kp F7              &kp F8               &kp F9                &kp F10  &kp F11
+&trans  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp SV_LEFT_BRACE  &kp SV_RIGHT_BRACE  &kp SV_LEFT_BRACKET  &kp SV_RIGHT_BRACKET  &trans   &kp F12
+&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp COMMA          &kp SV_DOT          &kp SV_MINUS         &kp SV_SINGLE_QUOTE   &trans   &trans
+&trans  &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp SV_EQUAL       &kp SV_PLUS         &trans               &trans                &trans   &trans
+                   &trans     &trans    &trans    &trans     &trans    &trans  &trans             &trans              &trans               &trans
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>,
-                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         raise_layer {
@@ -113,11 +109,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESCAPE        &trans  &trans   &trans    &trans       &trans                      &kp PRINTSCREEN  &trans    &trans    &trans     &trans  &trans
-&kp TAB           &trans  &kp INS  &kp HOME  &kp PAGE_UP  &trans                      &trans           &trans    &kp UP    &trans     &trans  &trans
-&kp LEFT_SHIFT    &trans  &kp DEL  &kp END   &kp PG_DN    &kp CLCK                    &kp BACKSPACE    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&kp LEFT_CONTROL  &trans  &trans   &trans    &trans       &trans    &trans    &trans  &trans           &trans    &trans    &trans     &trans  &trans
-                          &trans   &trans    &trans       &trans    &trans    &trans  &trans           &trans    &trans    &trans
+&kp ESCAPE        &trans  &trans   &trans    &trans       &trans                            &kp PRINTSCREEN  &trans    &trans    &trans     &trans  &trans
+&kp TAB           &trans  &kp INS  &kp HOME  &kp PAGE_UP  &trans                            &trans           &trans    &kp UP    &trans     &trans  &trans
+&kp LEFT_SHIFT    &trans  &kp DEL  &kp END   &kp PG_DN    &kp CLCK                          &kp BACKSPACE    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&kp LEFT_CONTROL  &trans  &trans   &trans    &trans       &trans    &trans       &trans     &trans           &trans    &trans    &trans     &trans  &trans
+                          &trans   &trans    &trans       &trans    &kp SPACE    &kp SPACE  &trans           &trans    &trans    &trans
             >;
         };
 
