@@ -20,21 +20,16 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
-    combos {
-        compatible = "zmk,combos";
-
-        to_numpad {
-            bindings = <&tog 4>;
-            key-positions = <56 53 44>;
-        };
-
-        to_system {
-            bindings = <&tog 3>;
-            key-positions = <56 53 26>;
+        switch {
+            if-layers = <1 2>;
+            then-layer = <5>;
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         caps: caps {
@@ -48,7 +43,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        home_layer {
             display-name = "Home";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -134,6 +129,16 @@
             >;
 
             label = "numpad";
+        };
+
+        switch_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &to 3   &trans  &trans  &trans                    &to 0   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to 4   &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
